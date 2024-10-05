@@ -1,0 +1,84 @@
+body{
+    width: 100%;
+    margin: auto;
+    font-family:monospace;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    background-color: #38AB42;
+    a{
+        text-decoration: none;        
+    }
+    #MainPage h1{
+        grid-column: 1;        
+        font-size: 3em;
+        text-align: center;
+    }
+    #Tabs{
+        display: flex;
+        justify-content: space-around;
+        align-items:  center;
+        grid-column: 3;
+    }
+    .tab h1{
+        text-align: center;
+        font-size: 2em;
+    }
+}
+header h1:hover{
+    font-size: 2.3em;
+}
+
+header h1{
+    color: black;
+    transition:  0.7s font-size ease;
+}
+
+main{
+    height:auto;
+    text-align: center;
+    padding-bottom: 3em;
+
+    p{
+        margin-inline: 25%;
+        font-size: 1.2em;
+    }
+}
+
+main img{
+    margin: 1.2em;
+    display: inline-block;
+    text-align: center;
+    border-style: solid;
+    border-color: #38AB42;
+    height: auto;
+    width: 25%;
+}
+
+/* footer{
+    height: auto;
+    padding-bottom: 3%;
+    background-color: #38AB42;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.contact-list {
+    padding-top: 2%;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-list a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+   text-decoration: underline;
+} */
