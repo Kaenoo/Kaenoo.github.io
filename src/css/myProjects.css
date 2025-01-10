@@ -8,24 +8,25 @@ header{
     display: grid;
     grid-template-columns: 20% 30% 50%;
     background-color: #38AB42;
-    margin-bottom: 2vh;
     a{
         text-decoration: none;        
     }
     #MainPage h1{
         grid-column: 1;        
         font-size: 3em;
-        text-align: center;
+        text-align: left;
+        padding-left: 45px;
     }
     #Tabs{
         display: flex;
-        justify-content: space-around;
+        justify-content: right;
         align-items:  center;
         grid-column: 3;
     }
     .tab h1{
         text-align: center;
         font-size: 2em;
+        padding-right: 45px;
     }
 }
 header h1:hover{
