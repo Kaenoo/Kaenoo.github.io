@@ -3,45 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/myProjects.css">
-    <title>My projects</title>
+    <link href="./css/output.css" rel="stylesheet">
+    <title>My Projects</title>
 </head>
-<body>
-    
-    <header>
+<body class="bg-gray-900 font-mono">
 
-        <a id="MainPage" href="index.html">
-            <h1>Kaenoo</h1>
-        </a>
-
-        <nav id="Tabs">
-            <a class="tab" href="myProjects.html">
-                <h1>My projects</h1>
+    <div class="container mx-auto">
+    <!-- Header -->
+    <header class="bg-gray-800 py-5">
+        <div class="container mx-auto flex justify-between items-center flex-wrap px-4">
+            <a href="./index.html" class="text-green-500 text-3xl md:text-4xl font-bold hover:text-green-400 transition duration-300">
+                Kaenoo
             </a>
-            <a class="tab" href="contact.html">
-                <h1>Contact</h1>
-            </a>
-        </nav>
+            <button class="block md:hidden text-green-500 focus:outline-none" id="menu-toggle">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <nav class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 w-full md:w-auto mt-4 md:mt-0 justify-end md:justify-start" id="menu">
+                <a href="./myProjects.html" class="block text-green-500 text-xl md:text-2xl hover:text-green-400 transition duration-300 text-right">
+                    My Projects
+                </a>
+                <a href="./contact.html" class="block text-green-500 text-xl md:text-2xl hover:text-green-400 transition duration-300 text-right">
+                    Contact
+                </a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <h2>Space Invaders project in C# Console</h2>
-        <video class="video" controls>
-            <source src="src/video/SpaceInvaders.mp4" type="video/mp4">
-        </video>
-        <a class="linkGit" href="https://github.com/Kaenoo/Spicy-Invader"><p>Github link</p></a>
-        <hr>
+    <!-- Menu dropdown -->
+    <script src="./menu_dropdown.js"></script>
 
-        <h2>Mastermind project in C# Windows Forms</h2>
-        <video class="video" controls>
-            <source src="src/video/Video_MasterMind.mp4" type="video/mp4">
-        </video>
-        <a class="linkGit" href="https://github.com/Kaenoo/MasterMind_Graphique"><p>Github link</p></a>
-        <hr>
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 lg:px-32 py-12 text-center">
+        <section class="mb-12">
+            <h2 class="text-3xl text-green-500 font-bold mb-4">Space Invaders Project in C# Console</h2>
+            <video class="w-full lg:w-2/3 mx-auto border-4 border-green-500 rounded-lg" controls>
+                <source src="./video/SpaceInvaders.mp4" type="video/mp4">
+            </video>
+            <a href="https://github.com/Kaenoo/Spicy-Invader" class="block mt-4 text-green-500 text-xl hover:text-green-400 transition duration-300">
+                Github Link
+            </a>
+        </section>
+
+        <hr class="border-green-500 my-8">
+
+        <section class="mb-12">
+            <h2 class="text-3xl text-green-500 font-bold mb-4">Mastermind Project in C# Windows Forms</h2>
+            <video class="w-full lg:w-2/3 mx-auto border-4 border-green-500 rounded-lg" controls>
+                <source src="./video/Video_MasterMind.mp4" type="video/mp4">
+            </video>
+            <a href="https://github.com/Kaenoo/MasterMind_Graphique" class="block mt-4 text-green-500 text-xl hover:text-green-400 transition duration-300">
+                Github Link
+            </a>
+        </section>
+
+        <hr class="border-green-500 my-8">
+
+        <section class="mb-12">
+            <h2 class="text-3xl text-green-500 font-bold mb-4">Website using Tailwind CSS, PHP and MySQL</h2>
+            <video class="w-full lg:w-2/3 mx-auto border-4 border-green-500 rounded-lg" controls>
+                <source src="./video/website_Passion_lecture.mp4" type="video/mp4">
+            </video>
+            <a href="https://github.com/Kaenoo/P_Passion-lecture" class="block mt-4 text-green-500 text-xl hover:text-green-400 transition duration-300">
+                Github Link
+            </a>
+        </section>
+
     </main>
 
-    <footer>
-
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4 mt-12">
+        <ul class="flex justify-center space-x-6">
+            <li>
+                <a href="https://github.com/Kaenoo" target="_blank" class="text-green-500 hover:text-green-400 transition duration-300">
+                    GitHub
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/kaeno-eyer/" target="_blank" class="text-green-500 hover:text-green-400 transition duration-300">
+                    LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="mailto:kaeno.eyer@ikmail.ch" class="text-green-500 hover:text-green-400 transition duration-300">
+                    Email
+                </a>
+            </li>
+        </ul>
     </footer>
+    
+</div>  
 </body>
 </html>
