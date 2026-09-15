@@ -1,98 +1,218 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/output.css" rel="stylesheet">
-    <title>My Projects</title>
+    <title>Projects — Kaenoo</title>
+    <meta name="description" content="Selected projects by Kaenoo: C# games, web apps and tooling.">
+    <meta name="theme-color" content="#040b07">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="./css/output.css">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects — Kaenoo">
+    <meta property="og:description" content="Selected projects by Kaenoo: C# games, web apps and tooling.">
+    <meta property="og:url" content="https://kaenoo.github.io/myProjects.html">
+    <meta property="og:image" content="https://kaenoo.github.io/img/meByIA.png">
+    <link rel="canonical" href="https://kaenoo.github.io/myProjects.html">
 </head>
-<body class="bg-gray-900 font-mono">
 
-    <div class="container mx-auto">
-    <!-- Header -->
-    <header class="bg-gray-800 py-5">
-        <div class="container mx-auto flex justify-between items-center flex-wrap px-4">
-            <a href="./index.html" class="text-green-500 text-3xl md:text-4xl font-bold hover:text-green-400 transition duration-300">
-                Kaenoo
+<body class="min-h-dvh flex flex-col">
+
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-signal focus:px-4 focus:py-2 focus:text-ink">
+        Skip to content
+    </a>
+
+    <!-- ===== Header ===== -->
+    <header id="site-header" class="sticky top-0 z-40 border-b border-transparent transition-all duration-300">
+        <div class="container-page flex items-center justify-between py-4">
+            <a href="./index.html" class="group flex items-center gap-3" aria-label="Kaenoo — home">
+                <img src="./favicon.svg" alt="" class="h-9 w-9 transition-transform duration-300 group-hover:rotate-6">
+                <span class="font-mono text-lg font-bold tracking-tight text-frost">
+                    Kaenoo<span class="text-signal">.</span>
+                </span>
             </a>
-            <button class="block md:hidden text-green-500 focus:outline-none" id="menu-toggle">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+
+            <nav class="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+                <a href="./index.html" class="text-mist transition-colors duration-200 hover:text-signal">Home</a>
+                <a href="./myProjects.html" aria-current="page" class="text-signal">Projects</a>
+                <a href="./contact.html" class="text-mist transition-colors duration-200 hover:text-signal">Contact</a>
+                <a href="./contact.html" class="btn-ghost !py-2 !px-4">Hire me</a>
+            </nav>
+
+            <button id="menu-toggle" class="flex h-10 w-10 items-center justify-center rounded-xl border border-line text-signal md:hidden"
+                aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
                 </svg>
             </button>
-            <nav class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 w-full md:w-auto mt-4 md:mt-0 justify-end md:justify-start" id="menu">
-                <a href="./myProjects.html" class="block text-green-500 text-xl md:text-2xl hover:text-green-400 transition duration-300 text-right">
-                    My Projects
-                </a>
-                <a href="./contact.html" class="block text-green-500 text-xl md:text-2xl hover:text-green-400 transition duration-300 text-right">
-                    Contact
-                </a>
+        </div>
+
+        <div id="mobile-menu" class="hidden border-t border-line bg-ink/95 backdrop-blur md:hidden">
+            <nav class="container-page flex flex-col gap-1 py-4" aria-label="Mobile navigation">
+                <a href="./index.html" class="rounded-lg px-3 py-2 font-mono text-sm text-mist transition-colors hover:text-signal">Home</a>
+                <a href="./myProjects.html" aria-current="page" class="rounded-lg px-3 py-2 font-mono text-sm text-signal">Projects</a>
+                <a href="./contact.html" class="rounded-lg px-3 py-2 font-mono text-sm text-mist transition-colors hover:text-signal">Contact</a>
+                <a href="./contact.html" class="btn-ghost mt-2 !py-2.5">Hire me</a>
             </nav>
         </div>
     </header>
 
-    <!-- Menu dropdown -->
-    <script src="./menu_dropdown.js"></script>
+    <main id="main" class="flex-1">
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 lg:px-32 py-12 text-center">
-        <section class="mb-12">
-            <h2 class="text-3xl text-green-500 font-bold mb-4">Space Invaders Project in C# Console</h2>
-            <video class="w-full lg:w-2/3 mx-auto border-4 border-green-500 rounded-lg" controls>
-                <source src="./video/SpaceInvaders.mp4" type="video/mp4">
-            </video>
-            <a href="https://github.com/Kaenoo/Spicy-Invader" class="block mt-4 text-green-500 text-xl hover:text-green-400 transition duration-300">
-                Github Link
-            </a>
+        <!-- ===== Page header ===== -->
+        <section class="container-page pt-16 pb-10 lg:pt-20">
+            <p class="font-mono text-sm text-signal">// repository</p>
+            <h1 class="mt-3 text-4xl font-bold tracking-tight text-frost sm:text-5xl">My projects</h1>
+            <p class="mt-4 max-w-xl text-lg text-mist">
+                A small but honest collection — games, web apps and experiments. Click a card to watch the demo.
+            </p>
         </section>
 
-        <hr class="border-green-500 my-8">
-
-        <section class="mb-12">
-            <h2 class="text-3xl text-green-500 font-bold mb-4">Mastermind Project in C# Windows Forms</h2>
-            <video class="w-full lg:w-2/3 mx-auto border-4 border-green-500 rounded-lg" controls>
-                <source src="./video/Video_MasterMind.mp4" type="video/mp4">
-            </video>
-            <a href="https://github.com/Kaenoo/MasterMind_Graphique" class="block mt-4 text-green-500 text-xl hover:text-green-400 transition duration-300">
-                Github Link
-            </a>
+        <!-- ===== Filters ===== -->
+        <section class="container-page pb-10" aria-label="Filter projects">
+            <div role="group" class="flex flex-wrap gap-2" id="filters">
+                <button type="button" data-filter="all" aria-pressed="true"
+                    class="btn-ghost !px-4 !py-2 !bg-signal !text-ink !border-signal">All</button>
+                <button type="button" data-filter="game" aria-pressed="false"
+                    class="btn-ghost !px-4 !py-2">Games</button>
+                <button type="button" data-filter="web" aria-pressed="false"
+                    class="btn-ghost !px-4 !py-2">Web</button>
+                <button type="button" data-filter="other" aria-pressed="false"
+                    class="btn-ghost !px-4 !py-2">Other</button>
+            </div>
         </section>
 
-        <hr class="border-green-500 my-8">
+        <!-- ===== Projects grid ===== -->
+        <section class="container-page grid gap-8 pb-20 lg:grid-cols-2 lg:pb-28" id="projects-grid">
 
-        <section class="mb-12">
-            <h2 class="text-3xl text-green-500 font-bold mb-4">Website using Tailwind CSS, PHP and MySQL</h2>
-            <video class="w-full lg:w-2/3 mx-auto border-4 border-green-500 rounded-lg" controls>
-                <source src="./video/website_Passion_lecture.mp4" type="video/mp4">
-            </video>
-            <a href="https://github.com/Kaenoo/P_Passion-lecture" class="block mt-4 text-green-500 text-xl hover:text-green-400 transition duration-300">
-                Github Link
-            </a>
+            <!-- Spicy Invader -->
+            <article class="card flex flex-col overflow-hidden" data-category="game">
+                <button type="button" class="project-video group relative block aspect-video w-full overflow-hidden bg-ink-3" data-video="./video/SpaceInvaders.mp4" data-poster="./img/posters/space_invaders.jpg" aria-label="Play demo video of Spicy Invader">
+                    <img src="./img/posters/space_invaders.jpg" alt="Spicy Invader demo preview"
+                        class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100" loading="lazy">
+                    <span class="absolute inset-0 grid place-items-center">
+                        <span class="grid h-16 w-16 place-items-center rounded-full border border-signal bg-ink/70 text-signal backdrop-blur transition-transform duration-300 group-hover:scale-110">
+                            <svg class="ml-1 h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                        </span>
+                    </span>
+                    <span class="absolute right-3 top-3 chip !bg-ink/80">C# · Console</span>
+                </button>
+                <div class="flex flex-1 flex-col p-6">
+                    <h2 class="text-xl font-semibold text-frost">Spicy Invader</h2>
+                    <p class="mt-2 flex-1 leading-relaxed text-mist">
+                        A Space Invaders clone built in a classic C# console — grid-based gameplay, movement,
+                        shooting and wave logic.
+                    </p>
+                    <div class="mt-4 flex items-center justify-between gap-4">
+                        <ul class="flex flex-wrap gap-2" aria-label="Technologies">
+                            <li class="chip">C#</li>
+                            <li class="chip">Console</li>
+                        </ul>
+                        <a href="https://github.com/Kaenoo/Spicy-Invader" target="_blank" rel="noopener"
+                            class="font-mono text-sm text-signal underline-offset-4 hover:underline">GitHub →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- MasterMind -->
+            <article class="card flex flex-col overflow-hidden" data-category="game">
+                <button type="button" class="project-video group relative block aspect-video w-full overflow-hidden bg-ink-3" data-video="./video/Video_MasterMind.mp4" data-poster="./img/posters/mastermind.jpg" aria-label="Play demo video of MasterMind">
+                    <img src="./img/posters/mastermind.jpg" alt="MasterMind demo preview"
+                        class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100" loading="lazy">
+                    <span class="absolute inset-0 grid place-items-center">
+                        <span class="grid h-16 w-16 place-items-center rounded-full border border-signal bg-ink/70 text-signal backdrop-blur transition-transform duration-300 group-hover:scale-110">
+                            <svg class="ml-1 h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                        </span>
+                    </span>
+                    <span class="absolute right-3 top-3 chip !bg-ink/80">C# · WinForms</span>
+                </button>
+                <div class="flex flex-1 flex-col p-6">
+                    <h2 class="text-xl font-semibold text-frost">MasterMind</h2>
+                    <p class="mt-2 flex-1 leading-relaxed text-mist">
+                        The classic code-breaking game with a graphical C# Windows Forms interface — feedback pegs,
+                        guess history and a clean UI.
+                    </p>
+                    <div class="mt-4 flex items-center justify-between gap-4">
+                        <ul class="flex flex-wrap gap-2" aria-label="Technologies">
+                            <li class="chip">C#</li>
+                            <li class="chip">WinForms</li>
+                        </ul>
+                        <a href="https://github.com/Kaenoo/MasterMind_Graphique" target="_blank" rel="noopener"
+                            class="font-mono text-sm text-signal underline-offset-4 hover:underline">GitHub →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Passion lecture -->
+            <article class="card flex flex-col overflow-hidden" data-category="web">
+                <button type="button" class="project-video group relative block aspect-video w-full overflow-hidden bg-ink-3" data-video="./video/website_Passion_lecture.mp4" data-poster="./img/posters/passion_lecture.jpg" aria-label="Play demo video of the Passion Lecture website">
+                    <img src="./img/posters/passion_lecture.jpg" alt="Passion Lecture website demo preview"
+                        class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100" loading="lazy">
+                    <span class="absolute inset-0 grid place-items-center">
+                        <span class="grid h-16 w-16 place-items-center rounded-full border border-signal bg-ink/70 text-signal backdrop-blur transition-transform duration-300 group-hover:scale-110">
+                            <svg class="ml-1 h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                        </span>
+                    </span>
+                    <span class="absolute right-3 top-3 chip !bg-ink/80">Web · PHP</span>
+                </button>
+                <div class="flex flex-1 flex-col p-6">
+                    <h2 class="text-xl font-semibold text-frost">Passion Lecture</h2>
+                    <p class="mt-2 flex-1 leading-relaxed text-mist">
+                        A full reading-passion website built with Tailwind CSS, PHP and MySQL — articles, authentication
+                        and dynamic content.
+                    </p>
+                    <div class="mt-4 flex items-center justify-between gap-4">
+                        <ul class="flex flex-wrap gap-2" aria-label="Technologies">
+                            <li class="chip">Tailwind</li>
+                            <li class="chip">PHP</li>
+                            <li class="chip">MySQL</li>
+                        </ul>
+                        <a href="https://github.com/Kaenoo/P_Passion-lecture" target="_blank" rel="noopener"
+                            class="font-mono text-sm text-signal underline-offset-4 hover:underline">GitHub →</a>
+                    </div>
+                </div>
+            </article>
+
+            <p id="no-results" class="col-span-full hidden py-16 text-center font-mono text-mist">
+                // empty — no projects matching this filter.
+            </p>
         </section>
 
+        <!-- ===== CTA band ===== -->
+        <section class="container-page pb-20 lg:pb-28">
+            <div class="card relative overflow-hidden p-8 sm:p-12">
+                <div class="pointer-events-none absolute inset-0 bg-grid opacity-40" aria-hidden="true"></div>
+                <div class="relative flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+                    <div>
+                        <h2 class="text-2xl font-bold tracking-tight text-frost sm:text-3xl">Like what you see?</h2>
+                        <p class="mt-2 max-w-md text-mist">More code and experiments live on my GitHub.</p>
+                    </div>
+                    <a href="https://github.com/Kaenoo" target="_blank" rel="noopener" class="btn-primary !py-3 !px-6">
+                        Browse GitHub
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-4 mt-12">
-        <ul class="flex justify-center space-x-6">
-            <li>
-                <a href="https://github.com/Kaenoo" target="_blank" class="text-green-500 hover:text-green-400 transition duration-300">
-                    GitHub
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/kaeno-eyer/" target="_blank" class="text-green-500 hover:text-green-400 transition duration-300">
-                    LinkedIn
-                </a>
-            </li>
-            <li>
-                <a href="mailto:kaeno.eyer@ikmail.ch" class="text-green-500 hover:text-green-400 transition duration-300">
-                    Email
-                </a>
-            </li>
-        </ul>
+    <!-- ===== Footer ===== -->
+    <footer class="border-t border-line bg-ink-2/60">
+        <div class="container-page flex flex-col items-center justify-between gap-6 py-10 sm:flex-row">
+            <div class="flex items-center gap-3">
+                <img src="./favicon.svg" alt="" class="h-7 w-7">
+                <p class="font-mono text-sm text-mist">© <span id="year">2026</span> Kaenoo — built with patience &amp; Tailwind.</p>
+            </div>
+            <ul class="flex gap-8 font-mono text-sm">
+                <li><a href="https://github.com/Kaenoo" target="_blank" rel="noopener" class="text-mist transition-colors hover:text-signal">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/kaeno-eyer/" target="_blank" rel="noopener" class="text-mist transition-colors hover:text-signal">LinkedIn</a></li>
+                <li><a href="mailto:kaeno.eyer@ikmail.ch" class="text-mist transition-colors hover:text-signal">Email</a></li>
+            </ul>
+        </div>
     </footer>
-    
-</div>  
+
+    <script src="./js/main.js"></script>
 </body>
+
 </html>

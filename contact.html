@@ -1,58 +1,151 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/output.css" rel="stylesheet">
-    <title>Contact</title>
+    <title>Contact — Kaenoo</title>
+    <meta name="description" content="Get in touch with Kaenoo — GitHub, LinkedIn, email and TryHackMe.">
+    <meta name="theme-color" content="#040b07">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="./css/output.css">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact — Kaenoo">
+    <meta property="og:description" content="Get in touch with Kaenoo — GitHub, LinkedIn, email and TryHackMe.">
+    <meta property="og:url" content="https://kaenoo.github.io/contact.html">
+    <meta property="og:image" content="https://kaenoo.github.io/img/meByIA.png">
+    <link rel="canonical" href="https://kaenoo.github.io/contact.html">
 </head>
-<body class="bg-gray-900 font-mono">
 
-    <div class="container mx-auto">
+<body class="min-h-dvh flex flex-col">
 
-    <!-- Header -->
-    <header class="bg-gray-800 py-5">
-        <div class="container mx-auto flex justify-between items-center flex-wrap px-4">
-            <a href="./index.html" class="text-green-500 text-3xl md:text-4xl font-bold hover:text-green-400 transition duration-300">
-                Kaenoo
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-signal focus:px-4 focus:py-2 focus:text-ink">
+        Skip to content
+    </a>
+
+    <!-- ===== Header ===== -->
+    <header id="site-header" class="sticky top-0 z-40 border-b border-transparent transition-all duration-300">
+        <div class="container-page flex items-center justify-between py-4">
+            <a href="./index.html" class="group flex items-center gap-3" aria-label="Kaenoo — home">
+                <img src="./favicon.svg" alt="" class="h-9 w-9 transition-transform duration-300 group-hover:rotate-6">
+                <span class="font-mono text-lg font-bold tracking-tight text-frost">
+                    Kaenoo<span class="text-signal">.</span>
+                </span>
             </a>
-            <button class="block md:hidden text-green-500 focus:outline-none" id="menu-toggle">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+
+            <nav class="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+                <a href="./index.html" class="text-mist transition-colors duration-200 hover:text-signal">Home</a>
+                <a href="./myProjects.html" class="text-mist transition-colors duration-200 hover:text-signal">Projects</a>
+                <a href="./contact.html" aria-current="page" class="text-signal">Contact</a>
+                <a href="./contact.html" class="btn-ghost !py-2 !px-4">Hire me</a>
+            </nav>
+
+            <button id="menu-toggle" class="flex h-10 w-10 items-center justify-center rounded-xl border border-line text-signal md:hidden"
+                aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
                 </svg>
             </button>
-            <nav class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 w-full md:w-auto mt-4 md:mt-0 justify-end md:justify-start" id="menu">
-                <a href="./myProjects.html" class="block text-green-500 text-xl md:text-2xl hover:text-green-400 transition duration-300 text-right">
-                    My Projects
-                </a>
-                <a href="./contact.html" class="block text-green-500 text-xl md:text-2xl hover:text-green-400 transition duration-300 text-right">
-                    Contact
-                </a>
+        </div>
+
+        <div id="mobile-menu" class="hidden border-t border-line bg-ink/95 backdrop-blur md:hidden">
+            <nav class="container-page flex flex-col gap-1 py-4" aria-label="Mobile navigation">
+                <a href="./index.html" class="rounded-lg px-3 py-2 font-mono text-sm text-mist transition-colors hover:text-signal">Home</a>
+                <a href="./myProjects.html" class="rounded-lg px-3 py-2 font-mono text-sm text-mist transition-colors hover:text-signal">Projects</a>
+                <a href="./contact.html" aria-current="page" class="rounded-lg px-3 py-2 font-mono text-sm text-signal">Contact</a>
+                <a href="./contact.html" class="btn-ghost mt-2 !py-2.5">Hire me</a>
             </nav>
         </div>
     </header>
 
-    <!-- Menu dropdown -->
-    <script src="./menu_dropdown.js"></script>
+    <main id="main" class="flex-1">
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 lg:px-32 py-12 min-h-screen flex flex-col items-center justify-center text-center">
-        <h1 class="text-4xl text-green-500 font-bold mb-12">Contact Me</h1>
-        <div class="flex flex-wrap justify-center gap-8">
-            <a class="hover:scale-110 transition transform duration-300" href="https://github.com/Kaenoo" target="_blank">
-                <img class="w-16 md:w-32" src="./img/Github.png" alt="GitHub">
+        <!-- ===== Page header ===== -->
+        <section class="container-page pt-16 pb-12 lg:pt-20">
+            <p class="font-mono text-sm text-signal">// say_hi( );</p>
+            <h1 class="mt-3 text-4xl font-bold tracking-tight text-frost sm:text-5xl">Get in touch</h1>
+            <p class="mt-4 max-w-xl text-lg text-mist">
+                Questions, ideas, or just want to talk shop? Pick a channel — I usually reply fast to email.
+            </p>
+        </section>
+
+        <!-- ===== Contact cards ===== -->
+        <section class="container-page grid gap-6 pb-20 sm:grid-cols-2 lg:pb-28" aria-label="Contact channels">
+
+            <a href="mailto:kaeno.eyer@ikmail.ch"
+                class="card group flex flex-col justify-between gap-6 p-7 hover:-translate-y-1">
+                <div class="flex items-center justify-between">
+                    <span class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-ink-3 text-signal transition-transform duration-300 group-hover:scale-110">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6"></path></svg>
+                    </span>
+                    <span class="font-mono text-xs text-signal">preferred</span>
+                </div>
+                <div>
+                    <h2 class="text-lg font-semibold text-frost">Email</h2>
+                    <p class="mt-1 font-mono text-sm text-mist">kaeno.eyer@ikmail.ch</p>
+                </div>
             </a>
-            <a class="hover:scale-110 transition transform duration-300" href="https://fr.linkedin.com/in/kaeno-eyer" target="_blank">
-                <img class="w-16 md:w-32" src="./img/LinkedIn.png" alt="LinkedIn">
+
+            <a href="https://github.com/Kaenoo" target="_blank" rel="noopener"
+                class="card group flex flex-col justify-between gap-6 p-7 hover:-translate-y-1">
+                <div class="flex items-center justify-between">
+                    <span class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-ink-3 text-signal transition-transform duration-300 group-hover:scale-110">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 012.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.55A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"></path></svg>
+                    </span>
+                    <span class="font-mono text-xs text-signal">code</span>
+                </div>
+                <div>
+                    <h2 class="text-lg font-semibold text-frost">GitHub</h2>
+                    <p class="mt-1 font-mono text-sm text-mist">@Kaenoo</p>
+                </div>
             </a>
-            <a class="hover:scale-110 transition transform duration-300" href="mailto:kaeno.eyer@ikmail.com" target="_blank">
-                <img class="w-16 md:w-32" src="./img/email-icon.png" alt="Email">
+
+            <a href="https://www.linkedin.com/in/kaeno-eyer/" target="_blank" rel="noopener"
+                class="card group flex flex-col justify-between gap-6 p-7 hover:-translate-y-1">
+                <div class="flex items-center justify-between">
+                    <span class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-ink-3 text-signal transition-transform duration-300 group-hover:scale-110">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5a2.49 2.49 0 11-.02 4.98 2.49 2.49 0 01.02-4.98zM3 9h4v12H3zM9.5 9h3.83v1.66h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94V21h-4z"></path></svg>
+                    </span>
+                    <span class="font-mono text-xs text-signal">network</span>
+                </div>
+                <div>
+                    <h2 class="text-lg font-semibold text-frost">LinkedIn</h2>
+                    <p class="mt-1 font-mono text-sm text-mist">Kaeno Eyer</p>
+                </div>
             </a>
-			<a class="hover:scale-110 transition transform duration-300" href="https://tryhackme.com/p/Kaenoo" target="_blank">
-                <img class="w-16 md:w-32" src="./img/tryhackme.jpg" alt="TryHackMe">
+
+            <a href="https://tryhackme.com/p/Kaenoo" target="_blank" rel="noopener"
+                class="card group flex flex-col justify-between gap-6 p-7 hover:-translate-y-1">
+                <div class="flex items-center justify-between">
+                    <span class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-ink-3 text-signal transition-transform duration-300 group-hover:scale-110">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 4v5c0 4.5-3 8.5-7 9-4-.5-7-4.5-7-9V7z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path></svg>
+                    </span>
+                    <span class="font-mono text-xs text-signal">learn</span>
+                </div>
+                <div>
+                    <h2 class="text-lg font-semibold text-frost">TryHackMe</h2>
+                    <p class="mt-1 font-mono text-sm text-mist">Hacking &amp; security practice</p>
+                </div>
             </a>
-        </div>
+        </section>
     </main>
-</div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="border-t border-line bg-ink-2/60">
+        <div class="container-page flex flex-col items-center justify-between gap-6 py-10 sm:flex-row">
+            <div class="flex items-center gap-3">
+                <img src="./favicon.svg" alt="" class="h-7 w-7">
+                <p class="font-mono text-sm text-mist">© <span id="year">2026</span> Kaenoo — built with patience &amp; Tailwind.</p>
+            </div>
+            <ul class="flex gap-8 font-mono text-sm">
+                <li><a href="https://github.com/Kaenoo" target="_blank" rel="noopener" class="text-mist transition-colors hover:text-signal">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/kaeno-eyer/" target="_blank" rel="noopener" class="text-mist transition-colors hover:text-signal">LinkedIn</a></li>
+                <li><a href="mailto:kaeno.eyer@ikmail.ch" class="text-mist transition-colors hover:text-signal">Email</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
