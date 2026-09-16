@@ -84,6 +84,37 @@
         <!-- ===== Projects grid ===== -->
         <section class="container-page grid gap-8 pb-20 lg:grid-cols-2 lg:pb-28" id="projects-grid">
 
+            <!-- FlashCards -->
+            <article class="card flex flex-col overflow-hidden" data-category="web">
+                <a href="https://kaenoo.github.io/flashCards/" target="_blank" rel="noopener"
+                    class="group relative block aspect-video w-full overflow-hidden bg-ink-3" aria-label="Open FlashCards website">
+                    <img src="./img/posters/flashCards.png" alt="FlashCards app preview"
+                        class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100" loading="lazy">
+                    <span class="absolute inset-0 grid place-items-center">
+                        <span class="grid h-16 w-16 place-items-center rounded-full border border-signal bg-ink/70 text-signal backdrop-blur transition-transform duration-300 group-hover:scale-110">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </span>
+                    </span>
+                    <span class="absolute right-3 top-3 chip !bg-ink/80">Web · Vue.js</span>
+                </a>
+                <div class="flex flex-1 flex-col p-6">
+                    <h2 class="text-xl font-semibold text-frost">FlashCards</h2>
+                    <p class="mt-2 flex-1 leading-relaxed text-mist">
+                        An offline-first PWA to build and quiz memory card decks (key → value) — quiz, review and
+                        pause/resume modes.
+                    </p>
+                    <div class="mt-4 flex items-center justify-between gap-4">
+                        <ul class="flex flex-wrap gap-2" aria-label="Technologies">
+                            <li class="chip">Vue 3</li>
+                            <li class="chip">Tailwind</li>
+                            <li class="chip">PWA</li>
+                        </ul>
+                        <a href="https://github.com/Kaenoo/flashCards" target="_blank" rel="noopener"
+                            class="font-mono text-sm text-signal underline-offset-4 hover:underline">GitHub →</a>
+                    </div>
+                </div>
+            </article>
+
             <!-- Spicy Invader -->
             <article class="card flex flex-col overflow-hidden" data-category="game">
                 <button type="button" class="project-video group relative block aspect-video w-full overflow-hidden bg-ink-3" data-video="./video/SpaceInvaders.mp4" data-poster="./img/posters/space_invaders.jpg" aria-label="Play demo video of Spicy Invader">
